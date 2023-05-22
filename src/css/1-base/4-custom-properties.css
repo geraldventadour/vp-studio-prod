@@ -1,0 +1,7 @@
+:root {
+  --fw-bold: 700;
+  /* Step 0: 16.00px → 20.00px */
+  /* --step-0: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem); */
+  /* Step 0: 16.00px → 24.00px */
+  --step-0: clamp(1rem, calc(0.83rem + 0.87vw), 1.5rem);
+}
