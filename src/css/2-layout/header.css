@@ -1,0 +1,58 @@
+:root {
+  --display-on-mobile: none;
+}
+
+header {
+  --horizontal-alignment: space-between;
+  --vertical-alignment: center;
+}
+
+header button {
+  display: var(--display-on-mobile);
+}
+
+header li {
+  text-align: center;
+}
+
+header a {
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+  padding: 0.5em;
+  display: inline-block;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.enabled {
+  display: flex;
+}
+
+@media screen and (max-width: 70rem) {
+  :root {
+    --display-on-mobile: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    background-color: white;
+    inset: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+}
