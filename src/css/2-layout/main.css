@@ -1,3 +1,7 @@
 main {
   flex: 1;
 }
+
+main > .stack {
+  --margin-block-start: 1.5rem;
+}
