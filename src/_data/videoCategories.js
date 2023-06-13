@@ -13,6 +13,11 @@ module.exports = [
   },
   {
     name: 'Sport',
+    subcategories: ['Training', 'Lifettyle'],
+    url: `${baseUrl}/sport`,
+  },
+  {
+    name: 'After event',
     subcategories: ['Conférence', 'Séminaire', 'Congrès', 'Mariage', 'Salon'],
     url: `${baseUrl}/after-event`,
   },
