@@ -31,5 +31,18 @@ layout : "base.njk"
         </div>
       </div>
     </section>
+    <section class="workflow">
+      <div class="center stack">
+        <h2>Votre en projet en trois étapes</h2>
+        <div class="cluster">
+          {% for step in projectSteps %}
+            <article class="box card">
+              <h3>{{ step.name }}</h3>
+              <p>{{ step.description }}</p>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
   </div>
 </main>
