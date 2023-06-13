@@ -6,3 +6,7 @@
   --border-width: 0.5rem;
   --border-style: solid;
 }
+
+.card[data-type="project-step"]{
+  flex-basis: 17rem;
+}
