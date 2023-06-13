@@ -14,5 +14,22 @@ layout : "base.njk"
         </article>
       </div>
     </section>
+    <section class="realisations">
+      <div class="center stack">
+        <h2>Nos réalisations</h2>
+        <div class="cluster slider">
+          {%- for category in videoCategories %}
+          <article class="box card">
+            <h3>{{ category.name }}</h3>
+            <ul>
+              {% for subcategory in category.subcategories %}
+                <li>{{ subcategory }}</li>
+              {% endfor %}
+            </ul>
+          </article>
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
   </div>
 </main>
