@@ -19,14 +19,17 @@ layout : "base.njk"
         <h2>Nos réalisations</h2>
         <div class="cluster slider">
           {%- for category in videoCategories %}
-          <article class="box card">
-            <h3>{{ category.name }}</h3>
-            <ul>
-              {% for subcategory in category.subcategories %}
-                <li>{{ subcategory }}</li>
-              {% endfor %}
-            </ul>
-          </article>
+          <div class="box card cluster" data-type="thumbnail" data-category="{{category.slug}}">
+            <div class="stack">
+              <h3>{{ category.name }}</h3>
+                         {#  <ul>
+                {% for subcategory in category.subcategories %}
+                  <li>{{ subcategory }}</li>
+                {% endfor %}
+              </ul> #}
+              <a href="{{category.slug}}" class="thumbnail-link">En savoir plus <span class="sr-only">sur {{category.name}}</span></a>
+            </div>
+          </div>
           {%- endfor %}
         </div>
       </div>
@@ -34,7 +37,7 @@ layout : "base.njk"
     <section class="workflow">
       <div class="center stack">
         <h2>Votre en projet en trois étapes</h2>
-        <div class="cluster">
+        <div class="cluster slider">
           {% for step in projectSteps %}
             <article class="box card" data-type="project-step">
               <h3>{{ step.name }}</h3>

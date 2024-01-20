@@ -3,10 +3,50 @@
   flex-basis: 12rem;
   flex-grow: 1;
   --border-color: inherit;
-  --border-width: 0.5rem;
+  --border-width: 0.05rem;
   --border-style: solid;
+}
+
+.card[data-type="thumbnail"] {
+  min-block-size: 50vh;
+  --vertical-alignment:end;
+  --horizontal-alignment:center;
+  color: white;
+}
+
+.thumbnail-link {
+  text-decoration: none;
+  color: inherit;
+  border: 2px solid white;
+  padding: .25em;
+}
+
+
+.card[data-type="thumbnail"]{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .card[data-type="project-step"]{
   flex-basis: 17rem;
+}
+
+.card[data-category="marketing"]{
+  background-image: url("/images/marketing.png");
+  
+}
+
+.card[data-category="corporate"]{
+  background-image: url("/images/corporate.png");
+}
+
+.card[data-category="sport"]{
+  background-image: url("/images/sport.png");
+
+}
+
+.card[data-category="after-event"]{
+  background-image: url("/images/after-event.png");
 }
